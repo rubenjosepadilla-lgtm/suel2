@@ -1,0 +1,50 @@
+# suel2
+
+> suel2 es el sistema de nómina moderno para Chile y Latinoamérica. Automatiza el cálculo y pago de sueldos con cumplimiento legal 100% actualizado.
+
+## Qué es suel2
+
+suel2 es un software SaaS de nómina y gestión de remuneraciones para empresas en Chile y América Latina. Permite a equipos de RRHH y contabilidad procesar liquidaciones de sueldo, cotizaciones previsionales (AFP, salud), impuestos y pagos bancarios de forma automática, sin errores y con total cumplimiento legal.
+
+## Problema que resuelve
+
+Las empresas en Chile y LATAM pierden entre 2 y 5 días hábiles al mes calculando sueldos manualmente en Excel, corrigiendo errores de liquidaciones y buscando actualizaciones legales (cambios en AFP, tablas de impuestos, nuevas leyes laborales). suel2 elimina ese proceso manual.
+
+## Funcionalidades principales
+
+- Liquidaciones de sueldo automáticas con todos los descuentos legales
+- Integración nativa con Previred (cotizaciones previsionales Chile)
+- Integración con SII (boletas de honorarios, declaraciones de impuestos)
+- Pago directo al banco de cada empleado
+- Portal del empleado: acceso a liquidaciones, certificados y solicitudes
+- Reportes y dashboards de costos de personal
+- Alertas y recordatorios de fechas de pago
+- Gestión multi-empresa para contadores
+- Arquitectura multi-país para expansión regional
+
+## Mercado objetivo
+
+- Empresas chilenas de 1 a 500 empleados
+- Estudios contables que gestionan múltiples empresas
+- Expansión a Colombia, México, Perú, Argentina, Brasil y Centroamérica
+
+## Precios
+
+- **Starter**: Gratis — hasta 5 trabajadores
+- **Pro**: USD $29/mes — hasta 50 trabajadores
+- **Enterprise**: A medida — trabajadores ilimitados, multi-país
+
+## Estado actual
+
+suel2 está en fase MVP (Minimum Viable Product), desarrollando integraciones con Previred, SII y sistema bancario chileno. Busca empresas beta para validar el producto antes del lanzamiento oficial.
+
+## Empresa
+
+suel2 es una iniciativa de Sapport, empresa chilena de tecnología. Fundadores: Rubén Padilla (comercial y administrativo) y Abraham (experto en nómina LATAM).
+
+## Contacto y links
+
+- Sitio web: https://suel2.com
+- LinkedIn: https://www.linkedin.com/company/suel2
+- País de origen: Chile
+- Idioma principal: Español
