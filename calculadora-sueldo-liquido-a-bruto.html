@@ -93,6 +93,8 @@
   .res-row.tot{border-bottom:none;font-family:'Sora';font-weight:800;font-size:19px;margin-top:6px}
   .res-row.tot span:last-child{color:var(--teal)}
   .res-card.empresa .res-row.tot span:last-child{color:#FCD34D}
+  .res-card.prov .res-row.tot span:last-child{color:#A78BFA}
+  .res-card.prov .res-row.sub{color:#fff}
   .res-note{font-size:12px;color:#94A3B8;margin-top:12px;line-height:1.5}
   .disclaimer{background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:14px 16px;font-size:13px;color:#9A3412;margin-top:6px}
   .faq{margin-top:46px}
@@ -201,6 +203,7 @@
     </div>
     <div class="res-card" id="rescard"></div>
     <div class="res-card empresa" id="empresacard"></div>
+    <div class="res-card prov" id="provcard"></div>
     <div class="disclaimer">⚠️ <strong>Esto es un simulador: los montos son una estimación y pueden variar.</strong> El cálculo exacto depende de tu AFP y comisión, tu plan de salud real, bonos imponibles, anticipos y otros descuentos, además de los valores vigentes de UF, UTM e IMM. No es un cálculo oficial ni asesoría laboral o tributaria.</div>
   </div>
 
@@ -277,7 +280,9 @@ function forward(base,P){
   var imp=impuesto2daCat(baseTrib,P.UTM);
   var liquido=imponible-afp-salud-afcW-imp+P.mov+P.col+P.asig;
   var afcEmp=impAFC*(P.indef?P.afcEmpI:P.afcEmpP), sis=impAFP*P.sis, mut=impAFP*P.mut;
-  return {grat:grat,imponible:imponible,afp:afp,salud:salud,afcW:afcW,imp:imp,liquido:liquido,afcEmp:afcEmp,sis:sis,mut:mut};
+  var provVac=(imponible/30)*(1.25*1.4);
+  var provIAS=Math.min(imponible,P.topeUF*P.UF)/12;
+  return {grat:grat,imponible:imponible,afp:afp,salud:salud,afcW:afcW,imp:imp,liquido:liquido,afcEmp:afcEmp,sis:sis,mut:mut,provVac:provVac,provIAS:provIAS};
 }
 function reverse(target,P){ var lo=0,hi=80000000; for(var i=0;i<80;i++){var m=(lo+hi)/2; if(forward(m,P).liquido<target)lo=m;else hi=m;} return (lo+hi)/2; }
 
@@ -297,7 +302,10 @@ function calcular(){
   var base=reverse(target,P);
   var r=forward(base,P);
   var brutoHaberes=r.imponible + P.mov + P.col;
-  var costoEmpresa=brutoHaberes + r.afcEmp + r.sis + r.mut;
+  var aportes=r.afcEmp + r.sis + r.mut;
+  var provisiones=r.provVac + r.provIAS;
+  var costoEmpresa=brutoHaberes + aportes;
+  var costoConProv=costoEmpresa + provisiones;
   document.getElementById('brutoBig').textContent=clp(base);
 
   var saludLbl = saludMode==='uf' ? ('Salud ('+val('saluduf')+' UF)') : ('Salud ('+val('saludpct')+'%)');
@@ -322,8 +330,15 @@ function calcular(){
   emp+='<div class="res-row"><span>(+) Cesantía empleador ('+(indef?val('afcei'):val('afcep'))+'%)</span><span>'+clp(r.afcEmp)+'</span></div>';
   emp+='<div class="res-row"><span>(+) SIS ('+val('sis')+'%)</span><span>'+clp(r.sis)+'</span></div>';
   emp+='<div class="res-row"><span>(+) Mutual ('+val('mut')+'%)</span><span>'+clp(r.mut)+'</span></div>';
-  emp+='<div class="res-row tot"><span>Costo total para la empresa</span><span>'+clp(costoEmpresa)+'</span></div>';
-  document.getElementById('empresacard').innerHTML='<h3>Aportes patronales / costo empresa</h3>'+emp+'<div class="res-note">Los aportes del empleador (cesantía de su cargo, SIS y mutual) no se descuentan al trabajador: son costo adicional de la empresa.</div>';
+  emp+='<div class="res-row tot"><span>Costo mensual (haberes + aportes)</span><span>'+clp(costoEmpresa)+'</span></div>';
+  document.getElementById('empresacard').innerHTML='<h3>Aportes de la empresa</h3>'+emp+'<div class="res-note">Cotizaciones de cargo de la empresa (cesantía empleador, SIS y mutual). No se descuentan al trabajador: son costo adicional.</div>';
+
+  var prov='';
+  prov+='<div class="res-row"><span>Provisión de vacaciones (feriado)</span><span>'+clp(r.provVac)+'</span></div>';
+  prov+='<div class="res-row"><span>Provisión indemnización años de servicio (IAS)</span><span>'+clp(r.provIAS)+'</span></div>';
+  prov+='<div class="res-row sub"><span>Total provisiones</span><span>'+clp(provisiones)+'</span></div>';
+  prov+='<div class="res-row tot"><span>Costo total mensual (con provisiones)</span><span>'+clp(costoConProv)+'</span></div>';
+  document.getElementById('provcard').innerHTML='<h3>Provisiones (estimación mensual)</h3>'+prov+'<div class="res-note">Montos que la empresa acumula cada mes: vacaciones (1,25 días hábiles/mes) e indemnización por años de servicio (1 sueldo por año, tope 90 UF). La IAS es contingente: solo se paga en despido por necesidades de la empresa (art. 161).</div>';
 
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
