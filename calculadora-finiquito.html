@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Calculadora de Finiquito Chile 2026 — suel2</title>
+<title>Calculadora / Simulador de Finiquito Chile 2026 — suel2</title>
 <meta name="description" content="Calcula tu finiquito en Chile: indemnización por años de servicio, aviso previo, vacaciones proporcionales y gratificación. Gratis y al instante. Estimación referencial."/>
 <meta name="keywords" content="calcular finiquito, calculadora finiquito chile, indemnización años de servicio, finiquito 2026"/>
 <meta name="robots" content="index, follow"/>
@@ -106,9 +106,10 @@
 </nav>
 
 <div class="hero">
-  <div class="tag">Calculadora gratuita</div>
+  <div class="tag">Simulador gratuito</div>
   <h1>Calculadora de Finiquito · Chile 2026</h1>
-  <p>Estima tu finiquito al instante: indemnización por años de servicio, aviso previo, vacaciones proporcionales y gratificación. Resultado referencial.</p>
+  <p>Estima tu finiquito al instante: indemnización por años de servicio, aviso previo, vacaciones proporcionales y gratificación.</p>
+  <p style="color:#FCD9B6;font-size:13.5px;margin-top:10px;font-weight:500">Es un simulador: los montos son una estimación y pueden variar según tu caso.</p>
 </div>
 
 <div class="answer">
@@ -163,8 +164,8 @@
     <details class="params">
       <summary>Parámetros legales (editar — valores referenciales 2026)</summary>
       <div class="grid">
-        <div><label>Valor UF ($)</label><input type="number" id="uf" value="39000"/></div>
-        <div><label>Ingreso mínimo mensual ($)</label><input type="number" id="imm" value="529000"/></div>
+        <div><label>Valor UF ($)</label><input type="number" id="uf" value="40820"/></div>
+        <div><label>Ingreso mínimo mensual ($)</label><input type="number" id="imm" value="539000"/></div>
         <div><label>Feriado anual (días hábiles)</label><input type="number" id="feranual" value="15"/></div>
         <div><label>Tope años indemnización</label><input type="number" id="topeanios" value="11"/></div>
         <div><label>Tope remuneración (UF)</label><input type="number" id="topeuf" value="90"/></div>
@@ -200,7 +201,7 @@
 </div>
 
 <footer>
-  © 2026 suel2 · <a href="/">suel2.com</a> · <a href="/privacidad.html">Privacidad</a><br>
+  © 2026 suel2 · <a href="/">suel2.com</a> · <a href="/calculadora-sueldo-liquido-a-bruto.html">Simulador de sueldo</a> · <a href="/indicadores-previsionales-2026.html">Indicadores 2026</a> · <a href="/privacidad.html">Privacidad</a><br>
   Herramienta de orientación. No constituye asesoría legal.
 </footer>
 
@@ -295,6 +296,7 @@ function calcular(){
   if(esArt161 && decMonths<12) notes+='La indemnización por años de servicio requiere al menos 1 año de contrato vigente, por eso no se aplica. ';
   if(!esArt161) notes+='En esta causal no corresponde indemnización por años de servicio ni aviso previo. ';
   notes+='Base de indemnización usada: '+clp(baseInd)+(remun>topePesos?' (topada a '+topeUF+' UF).':'.');
+  notes+=' Parámetros usados: UF '+clp(UF)+', IMM '+clp(IMM)+'.';
 
   document.getElementById('rescard').innerHTML='<div style="font-family:Sora;font-weight:700;font-size:18px;margin-bottom:14px">Estimación de tu finiquito</div>'+rows+'<div class="res-note">'+notes+'</div>';
   document.getElementById('result').style.display='block';

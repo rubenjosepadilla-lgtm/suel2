@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Calculadora / Simulador de Sueldo Líquido a Bruto Chile 2026 — suel2</title>
+<meta name="description" content="Simula tu sueldo bruto a partir del líquido que quieres ganar en Chile: AFP, salud (% o plan en UF), seguro de cesantía según contrato, impuesto, gratificación, movilización, colación y aportes patronales. Gratis."/>
+<meta name="keywords" content="sueldo liquido a bruto, simulador sueldo chile, calcular sueldo bruto, costo empleador, aportes patronales"/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://suel2.com/calculadora-sueldo-liquido-a-bruto.html"/>
+<link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://suel2.com/calculadora-sueldo-liquido-a-bruto.html"/>
+<meta property="og:title" content="Simulador de Sueldo Líquido a Bruto Chile 2026 — suel2"/>
+<meta property="og:description" content="Cuánto sueldo bruto necesitas para el líquido que quieres ganar. Incluye salud en UF, tipo de contrato y aportes patronales."/>
+<meta property="og:image" content="https://suel2.com/og-image.jpg"/>
+<meta property="og:locale" content="es_CL"/>
+<meta property="og:site_name" content="suel2"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-42HXL5XPY5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { 'analytics_storage': 'denied' });
+  gtag('js', new Date());
+  gtag('config', 'G-42HXL5XPY5');
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebApplication","name":"Simulador de Sueldo Líquido a Bruto suel2","url":"https://suel2.com/calculadora-sueldo-liquido-a-bruto.html","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"CLP"},"description":"Simulador inverso de sueldo: convierte el sueldo líquido deseado en sueldo bruto en Chile, considerando AFP, salud, seguro de cesantía según contrato, impuesto, gratificación, movilización, colación y aportes patronales."},
+    {"@type":"FAQPage","mainEntity":[
+      {"@type":"Question","name":"¿Cómo se pasa de sueldo líquido a bruto en Chile?","acceptedAnswer":{"@type":"Answer","text":"El líquido es lo que recibes tras los descuentos legales (AFP, salud, seguro de cesantía e impuesto). Para llegar al bruto hay que reponer esos descuentos; como dependen del monto imponible, se resuelve de forma inversa buscando el bruto cuyo líquido coincide con el deseado."}},
+      {"@type":"Question","name":"¿La salud siempre es 7%?","acceptedAnswer":{"@type":"Answer","text":"El mínimo legal es 7% (Fonasa). En Isapre el plan se pacta en UF y puede superar el 7%; en ese caso el descuento es el valor del plan, no solo el 7%."}},
+      {"@type":"Question","name":"¿En qué cambia el contrato a plazo fijo?","acceptedAnswer":{"@type":"Answer","text":"En el seguro de cesantía: en contrato indefinido el trabajador aporta 0,6% y el empleador 2,4%; en plazo fijo el trabajador no aporta y el empleador paga el 3,0%."}},
+      {"@type":"Question","name":"¿Qué son los aportes patronales?","acceptedAnswer":{"@type":"Answer","text":"Son los costos que paga el empleador además del sueldo: el seguro de cesantía de cargo del empleador, el Seguro de Invalidez y Sobrevivencia (SIS) y el seguro de accidentes del trabajo (mutual). Sumados al bruto dan el costo total para la empresa."}}
+    ]}
+  ]
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"/>
+<style>
+  :root{--navy:#0F172A;--blue:#2563EB;--teal:#14B8A6;--blue-l:#60A5FA;--slate:#475569;--line:#E2E8F0}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',sans-serif;color:#1E293B;background:#fff;line-height:1.6}
+  a{color:var(--blue)}
+  nav{background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:16px 6%}
+  nav .logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+  nav .mark{width:36px;height:36px;border-radius:9px;background:linear-gradient(135deg,#2563EB,#14B8A6);color:#fff;font-family:'Sora';font-weight:700;display:flex;align-items:center;justify-content:center;font-size:15px}
+  nav .wm{font-family:'Sora';font-weight:700;color:#fff;font-size:20px}
+  nav .wm span{color:var(--blue-l)}
+  nav a.back{color:#cbd5e1;text-decoration:none;font-size:14px}
+  .hero{background:var(--navy);color:#fff;padding:46px 6% 38px;text-align:center}
+  .hero .tag{display:inline-block;background:rgba(96,165,250,.15);color:var(--blue-l);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-weight:700;padding:5px 12px;border-radius:20px}
+  .hero h1{font-family:'Sora';font-weight:800;font-size:clamp(25px,4vw,38px);margin:12px 0 10px;line-height:1.15}
+  .hero p{color:#94A3B8;max-width:680px;margin:0 auto;font-size:15.5px}
+  .hero .sim{color:#FCD9B6;font-size:13.5px;margin-top:10px;font-weight:500}
+  .answer{background:#EEF4FF;border-left:5px solid var(--blue);padding:18px 6%}
+  .answer p{max-width:900px;margin:0 auto;color:#0F172A;font-size:15.5px}
+  .wrap{max-width:920px;margin:0 auto;padding:36px 20px 70px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;box-shadow:0 8px 30px rgba(15,23,42,.05)}
+  .card h2{font-family:'Sora';font-weight:700;color:var(--navy);font-size:20px;margin-bottom:18px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:620px){.grid{grid-template-columns:1fr}}
+  label{display:block;font-size:13px;font-weight:600;color:var(--slate);margin-bottom:6px}
+  input,select{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:9px;font:inherit;font-size:15px;color:#0F172A;background:#fff}
+  input:focus,select:focus{outline:none;border-color:var(--blue)}
+  .big input{font-size:20px;font-weight:700;font-family:'Sora'}
+  .hint{font-size:12px;color:#94A3B8;margin-top:4px}
+  .check{display:flex;align-items:center;gap:8px;margin-top:10px}
+  .check input{width:auto}
+  .btn{margin-top:22px;width:100%;background:var(--blue);color:#fff;border:none;border-radius:10px;padding:14px;font:inherit;font-weight:700;font-size:16px;cursor:pointer;font-family:'Sora'}
+  .btn:hover{background:#1D4ED8}
+  details.params{margin-top:18px;border:1px dashed var(--line);border-radius:10px;padding:8px 14px}
+  details.params summary{cursor:pointer;font-weight:600;color:var(--slate);font-size:13px}
+  .params .grid{margin-top:14px}
+  .params h4{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin:16px 0 6px}
+  #result{display:none;margin-top:26px}
+  .head-res{background:linear-gradient(135deg,#2563EB,#14B8A6);border-radius:16px;padding:24px;color:#fff;text-align:center;margin-bottom:16px}
+  .head-res .lbl{font-size:14px;opacity:.9}
+  .head-res .big{font-family:'Sora';font-weight:800;font-size:34px;margin-top:4px}
+  .res-card{background:var(--navy);border-radius:16px;padding:24px;color:#fff;margin-bottom:16px}
+  .res-card h3{font-family:'Sora';font-weight:700;font-size:16px;margin-bottom:10px}
+  .res-row{display:flex;justify-content:space-between;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:15px}
+  .res-row span:first-child{color:#CBD5E1}
+  .res-row.sub{font-family:'Sora';font-weight:700}
+  .res-row.neg span:last-child{color:#FCA5A5}
+  .res-row.tot{border-bottom:none;font-family:'Sora';font-weight:800;font-size:19px;margin-top:6px}
+  .res-row.tot span:last-child{color:var(--teal)}
+  .res-card.empresa .res-row.tot span:last-child{color:#FCD34D}
+  .res-note{font-size:12px;color:#94A3B8;margin-top:12px;line-height:1.5}
+  .disclaimer{background:#FFF7ED;border:1px solid #FED7AA;border-radius:10px;padding:14px 16px;font-size:13px;color:#9A3412;margin-top:6px}
+  .faq{margin-top:46px}
+  .faq h2{font-family:'Sora';font-weight:700;color:var(--navy);font-size:24px;margin-bottom:6px}
+  .faq .rule{height:3px;width:48px;background:var(--teal);margin-bottom:24px}
+  .faq .q{border-bottom:1px solid var(--line);padding:18px 0}
+  .faq .q h3{font-size:16px;color:var(--navy);margin-bottom:6px;font-family:'Sora'}
+  .faq .q p{color:var(--slate);font-size:15px}
+  .cta{background:var(--navy);border-radius:16px;padding:30px;text-align:center;color:#fff;margin-top:40px}
+  .cta h2{font-family:'Sora';font-weight:800;font-size:22px;margin-bottom:8px}
+  .cta a{display:inline-block;background:linear-gradient(135deg,#2563EB,#14B8A6);color:#fff;text-decoration:none;font-weight:700;padding:12px 26px;border-radius:10px;font-family:'Sora';margin-top:6px}
+  .links{margin-top:20px;font-size:14px;text-align:center}
+  footer{background:var(--navy);color:#94A3B8;text-align:center;padding:28px;font-size:13px}
+  footer a{color:var(--blue-l);text-decoration:none}
+</style>
+</head>
+<body>
+<nav>
+  <a class="logo" href="/"><span class="mark">s2</span><span class="wm">suel<span>2</span></span></a>
+  <a class="back" href="/">← Volver a suel2.com</a>
+</nav>
+
+<div class="hero">
+  <span class="tag">Simulador gratuito</span>
+  <h1>Calculadora de Sueldo Líquido a Bruto · Chile 2026</h1>
+  <p>En Chile se negocia en líquido. Indica cuánto quieres ganar líquido y simula el sueldo bruto necesario, con todos los descuentos y los aportes del empleador.</p>
+  <p class="sim">Es un simulador: los montos son una estimación y pueden variar según tu caso.</p>
+</div>
+
+<div class="answer">
+  <p><strong>En breve:</strong> el líquido es lo que recibes tras los descuentos (AFP ≈10% + comisión, salud 7% o más en Isapre, seguro de cesantía e impuesto). Para pasar de líquido a bruto se reponen esos descuentos de forma inversa. La movilización y la colación son no imponibles. Además, el empleador paga aportes adicionales (cesantía, SIS y mutual) que conforman el costo total de la empresa.</p>
+</div>
+
+<div class="wrap">
+  <div class="card">
+    <h2>¿Cuánto quieres ganar líquido?</h2>
+    <div class="grid">
+      <div class="big">
+        <label>Sueldo líquido deseado ($)</label>
+        <input type="number" id="liquido" placeholder="2000000" min="0"/>
+      </div>
+      <div>
+        <label>Tipo de contrato</label>
+        <select id="contrato">
+          <option value="indef">Indefinido (cesantía trabajador 0,6%)</option>
+          <option value="plazo">Plazo fijo / obra (trabajador no aporta cesantía)</option>
+        </select>
+      </div>
+      <div>
+        <label>Tasa AFP total (% — 10% + comisión)</label>
+        <input type="number" id="afp" value="11.44" step="0.01"/>
+        <div class="hint">Comisión varía por AFP (≈0,49%–1,45%).</div>
+      </div>
+      <div>
+        <label>Salud</label>
+        <select id="saludmode" onchange="toggleSalud()">
+          <option value="pct">Porcentaje (Fonasa 7%)</option>
+          <option value="uf">Plan Isapre (monto en UF)</option>
+        </select>
+        <div id="saludpctrow" style="margin-top:8px"><input type="number" id="saludpct" value="7" step="0.1"/><div class="hint">7% es el mínimo legal.</div></div>
+        <div id="saludufrow" style="margin-top:8px;display:none"><input type="number" id="saluduf" value="4" step="0.1" placeholder="UF"/><div class="hint">Valor del plan en UF (puede superar el 7%).</div></div>
+      </div>
+      <div>
+        <label>Movilización mensual ($) <span class="hint">no imponible</span></label>
+        <input type="number" id="mov" placeholder="0" min="0"/>
+      </div>
+      <div>
+        <label>Colación mensual ($) <span class="hint">no imponible</span></label>
+        <input type="number" id="col" placeholder="0" min="0"/>
+      </div>
+      <div>
+        <label>Asignación familiar ($, si aplica)</label>
+        <input type="number" id="asig" placeholder="0" min="0"/>
+        <div class="hint">Suele ser $0 en sueldos medios/altos.</div>
+      </div>
+    </div>
+    <div class="check"><input type="checkbox" id="incgrat" checked/><label for="incgrat" style="margin:0">Incluir gratificación legal (25%, tope 4,75 IMM)</label></div>
+
+    <details class="params">
+      <summary>Parámetros legales (editar — valores referenciales 2026)</summary>
+      <div class="grid">
+        <div><label>Valor UF ($)</label><input type="number" id="uf" value="40820"/></div>
+        <div><label>Valor UTM ($)</label><input type="number" id="utm" value="71506"/></div>
+        <div><label>Ingreso mínimo mensual ($)</label><input type="number" id="imm" value="539000"/></div>
+        <div><label>Tope imponible AFP/salud (UF)</label><input type="number" id="topeuf" value="90" step="0.1"/></div>
+        <div><label>Tope imponible cesantía (UF)</label><input type="number" id="topeafc" value="135.2" step="0.1"/></div>
+        <div><label>Cesantía trabajador indefinido (%)</label><input type="number" id="afcw" value="0.6" step="0.1"/></div>
+      </div>
+      <h4>Aportes del empleador</h4>
+      <div class="grid">
+        <div><label>Cesantía empleador · indefinido (%)</label><input type="number" id="afcei" value="2.4" step="0.1"/></div>
+        <div><label>Cesantía empleador · plazo fijo (%)</label><input type="number" id="afcep" value="3.0" step="0.1"/></div>
+        <div><label>SIS — invalidez y sobrevivencia (%)</label><input type="number" id="sis" value="1.62" step="0.01"/></div>
+        <div><label>Mutual — accidentes del trabajo (%)</label><input type="number" id="mut" value="0.93" step="0.01"/></div>
+      </div>
+      <div class="hint" style="margin-top:8px">Valores por defecto: junio 2026. Consulta los <a href="/indicadores-previsionales-2026.html">indicadores previsionales por mes</a> para actualizarlos.</div>
+    </details>
+
+    <button class="btn" onclick="calcular()">Simular sueldo bruto</button>
+  </div>
+
+  <div id="result">
+    <div class="head-res">
+      <div class="lbl">Tu sueldo base bruto sería aproximadamente</div>
+      <div class="big" id="brutoBig">$0</div>
+    </div>
+    <div class="res-card" id="rescard"></div>
+    <div class="res-card empresa" id="empresacard"></div>
+    <div class="disclaimer">⚠️ <strong>Esto es un simulador: los montos son una estimación y pueden variar.</strong> El cálculo exacto depende de tu AFP y comisión, tu plan de salud real, bonos imponibles, anticipos y otros descuentos, además de los valores vigentes de UF, UTM e IMM. No es un cálculo oficial ni asesoría laboral o tributaria.</div>
+  </div>
+
+  <div class="faq">
+    <h2>Preguntas frecuentes</h2>
+    <div class="rule"></div>
+    <div class="q"><h3>¿Cómo se pasa de sueldo líquido a bruto?</h3><p>Reponiendo los descuentos (AFP, salud, cesantía e impuesto) sobre el líquido. Como dependen del imponible, se resuelve de forma inversa: se busca el bruto cuyo líquido coincide con el deseado.</p></div>
+    <div class="q"><h3>¿La salud siempre es 7%?</h3><p>El mínimo legal es 7% (Fonasa). En Isapre el plan se pacta en UF y puede superar el 7%; ahí el descuento es el valor del plan.</p></div>
+    <div class="q"><h3>¿En qué cambia el contrato a plazo fijo?</h3><p>En el seguro de cesantía: en indefinido el trabajador aporta 0,6% y el empleador 2,4%; en plazo fijo el trabajador no aporta y el empleador paga 3,0%.</p></div>
+    <div class="q"><h3>¿Qué son los aportes patronales?</h3><p>Costos que paga el empleador además del sueldo: cesantía de su cargo, SIS y mutual. Sumados al bruto dan el costo total para la empresa.</p></div>
+  </div>
+
+  <div class="cta">
+    <h2>Calcula sueldos y liquidaciones sin planillas</h2>
+    <p style="opacity:.85">suel2 automatiza la nómina completa con cumplimiento legal al día.</p>
+    <a href="/">Conoce suel2 →</a>
+  </div>
+
+  <div class="links">
+    Ver también: <a href="/calculadora-finiquito.html">Simulador de finiquito</a> · <a href="/indicadores-previsionales-2026.html">Indicadores previsionales 2026</a> · <a href="/como-calcular-finiquito-chile.html">Cómo calcular un finiquito</a>
+  </div>
+</div>
+
+<footer>
+  © 2026 suel2 · <a href="/">suel2.com</a> · <a href="/calculadora-finiquito.html">Simulador de finiquito</a> · <a href="/privacidad.html">Privacidad</a><br>
+  Simulador de orientación. No constituye asesoría laboral ni tributaria.
+</footer>
+
+<!-- Aviso de cookies (Consent Mode) -->
+<div id="cookie-banner" role="dialog" aria-label="Aviso de cookies" style="display:none;position:fixed;left:16px;right:16px;bottom:16px;max-width:560px;margin:0 auto;background:#0F172A;color:#E2E8F0;padding:18px 20px;border-radius:14px;box-shadow:0 12px 34px rgba(0,0,0,.28);font-family:inherit;z-index:99999;font-size:14px;line-height:1.55;">
+  <div style="margin-bottom:12px;">Usamos cookies propias y de Google Analytics para entender cómo se usa el sitio y mejorarlo. Puedes aceptarlas o rechazarlas. <a href="/privacidad.html" style="color:#93C5FD;text-decoration:underline;">Más información</a>.</div>
+  <div style="display:flex;gap:10px;justify-content:flex-end;">
+    <button id="cookie-reject" style="background:transparent;color:#E2E8F0;border:1px solid rgba(255,255,255,.35);border-radius:8px;padding:8px 16px;cursor:pointer;font:inherit;font-size:14px;">Rechazar</button>
+    <button id="cookie-accept" style="background:#14B8A6;color:#fff;border:none;border-radius:8px;padding:8px 18px;cursor:pointer;font:inherit;font-weight:700;font-size:14px;">Aceptar</button>
+  </div>
+</div>
+<script>
+(function(){
+  var KEY="cookie-consent-suel2";
+  function gtagSafe(){ if(typeof gtag==="function"){ gtag.apply(null,arguments); } }
+  var c=null; try{c=localStorage.getItem(KEY);}catch(e){}
+  var b=document.getElementById("cookie-banner");
+  if(c==="granted"){ gtagSafe("consent","update",{"analytics_storage":"granted"}); }
+  else if(c!=="denied"){ if(b) b.style.display="block"; }
+  function set(v){ try{localStorage.setItem(KEY,v);}catch(e){} if(b) b.style.display="none"; if(v==="granted") gtagSafe("consent","update",{"analytics_storage":"granted"}); }
+  var a=document.getElementById("cookie-accept"), r=document.getElementById("cookie-reject");
+  if(a) a.onclick=function(){set("granted");};
+  if(r) r.onclick=function(){set("denied");};
+})();
+</script>
+
+<script>
+function clp(n){ return new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0}).format(Math.round(n)); }
+function val(id){ var v=parseFloat(document.getElementById(id).value); return isNaN(v)?0:v; }
+function toggleSalud(){
+  var uf=document.getElementById('saludmode').value==='uf';
+  document.getElementById('saludufrow').style.display=uf?'block':'none';
+  document.getElementById('saludpctrow').style.display=uf?'none':'block';
+}
+function impuesto2daCat(baseTrib, UTM){
+  var t=baseTrib/UTM;
+  var br=[[13.5,0,0],[30,0.04,0.54],[50,0.08,1.74],[70,0.135,4.49],[90,0.23,11.14],[120,0.304,17.80],[310,0.35,23.32],[Infinity,0.40,38.82]];
+  for(var i=0;i<br.length;i++){ if(t<=br[i][0]){ return Math.max(0,t*br[i][1]-br[i][2])*UTM; } }
+  return 0;
+}
+function forward(base,P){
+  var grat=P.incGrat?Math.min(0.25*base,4.75*P.IMM/12):0;
+  var imponible=base+grat;
+  var impAFP=Math.min(imponible,P.topeUF*P.UF), impAFC=Math.min(imponible,P.topeAfcUF*P.UF);
+  var afp=impAFP*P.afp;
+  var salud=P.saludMode==='uf'?P.saludUF*P.UF:impAFP*P.saludPct;
+  var afcW=P.indef?impAFC*P.afcW:0;
+  var baseTrib=imponible-afp-salud-afcW;
+  var imp=impuesto2daCat(baseTrib,P.UTM);
+  var liquido=imponible-afp-salud-afcW-imp+P.mov+P.col+P.asig;
+  var afcEmp=impAFC*(P.indef?P.afcEmpI:P.afcEmpP), sis=impAFP*P.sis, mut=impAFP*P.mut;
+  return {grat:grat,imponible:imponible,afp:afp,salud:salud,afcW:afcW,imp:imp,liquido:liquido,afcEmp:afcEmp,sis:sis,mut:mut};
+}
+function reverse(target,P){ var lo=0,hi=80000000; for(var i=0;i<80;i++){var m=(lo+hi)/2; if(forward(m,P).liquido<target)lo=m;else hi=m;} return (lo+hi)/2; }
+
+function calcular(){
+  var target=val('liquido');
+  if(target<=0){ alert('Ingresa el sueldo líquido que quieres ganar.'); return; }
+  var indef=document.getElementById('contrato').value==='indef';
+  var saludMode=document.getElementById('saludmode').value;
+  var P={
+    incGrat:document.getElementById('incgrat').checked, indef:indef,
+    IMM:val('imm'), UF:val('uf'), UTM:val('utm'),
+    afp:val('afp')/100, saludMode:saludMode, saludPct:val('saludpct')/100, saludUF:val('saluduf'),
+    afcW:val('afcw')/100, afcEmpI:val('afcei')/100, afcEmpP:val('afcep')/100, sis:val('sis')/100, mut:val('mut')/100,
+    topeUF:val('topeuf'), topeAfcUF:val('topeafc'),
+    mov:val('mov'), col:val('col'), asig:val('asig')
+  };
+  var base=reverse(target,P);
+  var r=forward(base,P);
+  var brutoHaberes=r.imponible + P.mov + P.col;
+  var costoEmpresa=brutoHaberes + r.afcEmp + r.sis + r.mut;
+  document.getElementById('brutoBig').textContent=clp(base);
+
+  var saludLbl = saludMode==='uf' ? ('Salud ('+val('saluduf')+' UF)') : ('Salud ('+val('saludpct')+'%)');
+  var rows='';
+  rows+='<div class="res-row"><span>Sueldo base bruto</span><span>'+clp(base)+'</span></div>';
+  if(r.grat>0) rows+='<div class="res-row"><span>Gratificación legal</span><span>'+clp(r.grat)+'</span></div>';
+  rows+='<div class="res-row sub"><span>Total imponible</span><span>'+clp(r.imponible)+'</span></div>';
+  if(P.mov>0) rows+='<div class="res-row"><span>(+) Movilización (no imponible)</span><span>'+clp(P.mov)+'</span></div>';
+  if(P.col>0) rows+='<div class="res-row"><span>(+) Colación (no imponible)</span><span>'+clp(P.col)+'</span></div>';
+  rows+='<div class="res-row sub"><span>Total haberes (bruto)</span><span>'+clp(brutoHaberes)+'</span></div>';
+  rows+='<div class="res-row neg"><span>(−) AFP ('+val('afp')+'%)</span><span>-'+clp(r.afp)+'</span></div>';
+  rows+='<div class="res-row neg"><span>(−) '+saludLbl+'</span><span>-'+clp(r.salud)+'</span></div>';
+  if(r.afcW>0) rows+='<div class="res-row neg"><span>(−) Seguro cesantía ('+val('afcw')+'%)</span><span>-'+clp(r.afcW)+'</span></div>';
+  else rows+='<div class="res-row"><span>Seguro cesantía (plazo fijo)</span><span>no aplica al trabajador</span></div>';
+  rows+='<div class="res-row neg"><span>(−) Impuesto único</span><span>-'+clp(r.imp)+'</span></div>';
+  if(P.asig>0) rows+='<div class="res-row"><span>(+) Asignación familiar</span><span>'+clp(P.asig)+'</span></div>';
+  rows+='<div class="res-row tot"><span>Sueldo líquido</span><span>'+clp(r.liquido)+'</span></div>';
+  document.getElementById('rescard').innerHTML='<h3>Desglose del trabajador</h3>'+rows+'<div class="res-note">Parámetros usados: UF '+clp(P.UF)+' · UTM '+clp(P.UTM)+' · IMM '+clp(P.IMM)+' · imponible topado a '+val('topeuf')+' UF.</div>';
+
+  var emp='';
+  emp+='<div class="res-row"><span>Total haberes (bruto)</span><span>'+clp(brutoHaberes)+'</span></div>';
+  emp+='<div class="res-row"><span>(+) Cesantía empleador ('+(indef?val('afcei'):val('afcep'))+'%)</span><span>'+clp(r.afcEmp)+'</span></div>';
+  emp+='<div class="res-row"><span>(+) SIS ('+val('sis')+'%)</span><span>'+clp(r.sis)+'</span></div>';
+  emp+='<div class="res-row"><span>(+) Mutual ('+val('mut')+'%)</span><span>'+clp(r.mut)+'</span></div>';
+  emp+='<div class="res-row tot"><span>Costo total para la empresa</span><span>'+clp(costoEmpresa)+'</span></div>';
+  document.getElementById('empresacard').innerHTML='<h3>Aportes patronales / costo empresa</h3>'+emp+'<div class="res-note">Los aportes del empleador (cesantía de su cargo, SIS y mutual) no se descuentan al trabajador: son costo adicional de la empresa.</div>';
+
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth',block:'start'});
+  if(typeof gtag==='function'){ gtag('event','simula_liquido_bruto',{liquido:target}); }
+}
+</script>
+</body>
+</html>
