@@ -339,6 +339,19 @@
       .stat { padding: 16px 24px; border-right: none; border-bottom: 1px solid #E2E8F0; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
     }
+  
+    /* Dropdown Calculadoras */
+    .nav-drop{position:relative;display:inline-flex;align-items:center}
+    .nav-drop > a::after{content:" \25BE";font-size:10px}
+    .nav-drop-menu{position:absolute;top:100%;left:0;margin-top:8px;background:#fff;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 16px 40px rgba(15,23,42,.18);padding:8px;min-width:280px;display:none;z-index:300}
+    .nav-drop:hover .nav-drop-menu{display:block}
+    .nav-drop-menu a{display:block;color:#0F172A;font-size:14px;font-weight:500;padding:10px 12px;border-radius:8px;white-space:nowrap}
+    .nav-drop-menu a:hover{background:#F1F5F9;color:#2563EB}
+    .nav-sub{position:relative}
+    .nav-sub > a::after{content:" \25B8";float:right;color:#94A3B8}
+    .nav-sub-menu{position:absolute;top:-8px;left:100%;margin-left:6px;background:#fff;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 16px 40px rgba(15,23,42,.18);padding:8px;min-width:170px;display:none}
+    .nav-sub:hover .nav-sub-menu{display:block}
+    @media(max-width:980px){.nav-sub-menu{position:static;left:auto;margin:4px 0 4px 12px;box-shadow:none;border:none;border-left:2px solid #E2E8F0;border-radius:0}}
   </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-42HXL5XPY5"></script>
@@ -363,7 +376,25 @@
     <a href="#pricing">Precios</a>
     <a href="#testimonials">Clientes</a>
     <a href="#canales">Partners</a>
-    <a href="/calculadora-finiquito.html">Calculadoras</a>
+    <span class="nav-drop">
+      <a href="/calculadora-finiquito.html">Calculadoras</a>
+      <div class="nav-drop-menu">
+        <a href="/calculadora-finiquito.html">Calculadora de finiquito</a>
+        <a href="/calculadora-sueldo-liquido-a-bruto.html">Calculadora sueldo líquido a bruto</a>
+        <span class="nav-sub">
+          <a href="/indicadores-previsionales-2026.html">Indicadores previsionales</a>
+          <div class="nav-sub-menu">
+            <a href="/indicadores-previsionales-enero-2026.html">Enero 2026</a>
+            <a href="/indicadores-previsionales-febrero-2026.html">Febrero 2026</a>
+            <a href="/indicadores-previsionales-marzo-2026.html">Marzo 2026</a>
+            <a href="/indicadores-previsionales-abril-2026.html">Abril 2026</a>
+            <a href="/indicadores-previsionales-mayo-2026.html">Mayo 2026</a>
+            <a href="/indicadores-previsionales-junio-2026.html">Junio 2026</a>
+            <a href="/indicadores-previsionales-2026.html">Ver todos &rarr;</a>
+          </div>
+        </span>
+      </div>
+    </span>
   </div>
   <div class="nav-cta">
     <a class="btn btn-ghost" href="#">Iniciar sesión</a>
