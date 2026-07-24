@@ -1,30 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://suel2.com/</loc><priority>1.0</priority></url>
-  <url><loc>https://suel2.com/contadores</loc><priority>0.8</priority></url>
-  <url><loc>https://suel2.com/partners</loc><priority>0.8</priority></url>
-  <url><loc>https://suel2.com/privacidad</loc><priority>0.3</priority></url>
-  <url><loc>https://suel2.com/calculadora-finiquito</loc><priority>0.9</priority></url>
-  <url><loc>https://suel2.com/como-calcular-finiquito-chile</loc><priority>0.8</priority></url>
-  <url><loc>https://suel2.com/calculadora-sueldo-liquido-a-bruto</loc><priority>0.9</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-enero-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-febrero-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-marzo-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-abril-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-mayo-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-junio-2026</loc><priority>0.7</priority></url>
-  <url><loc>https://suel2.com/calculadoras</loc><priority>0.8</priority></url>
-  <url><loc>https://suel2.com/nosotros</loc><priority>0.5</priority></url>
-  <url><loc>https://suel2.com/terminos</loc><priority>0.5</priority></url>
-  <url><loc>https://suel2.com/blog</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/ley-proteccion-datos-nomina</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/sueldo-liquido-vs-bruto</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/proceso-de-finiquito</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/que-son-las-provisiones-nomina</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/reportes-legales-nomina-chile</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/gratificacion-legal-chile</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/errores-comunes-nomina</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/indicadores-previsionales-explicados</loc><priority>0.6</priority></url>
-  <url><loc>https://suel2.com/nomina-para-contadores</loc><priority>0.6</priority></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <url>
+    <loc>https://sapport.cl/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sapport.cl/en/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/"/>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://sapport.cl/proyectos-sap.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/proyectos-sap.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/proyectos-sap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/proyectos-sap.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sapport.cl/en/proyectos-sap.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/proyectos-sap.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/proyectos-sap.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/proyectos-sap.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sapport.cl/sap-workforce-services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/sap-workforce-services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/sap-workforce-services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/sap-workforce-services.html"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sapport.cl/en/sap-workforce-services.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/sap-workforce-services.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/sap-workforce-services.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/sap-workforce-services.html"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://sapport.cl/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/privacidad.html"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://sapport.cl/en/privacidad.html</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://sapport.cl/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://sapport.cl/en/privacidad.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://sapport.cl/privacidad.html"/>
+    <priority>0.2</priority>
+  </url>
 </urlset>
