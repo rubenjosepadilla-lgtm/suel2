@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-<!-- rebuild trigger 2026-07-01 -->
-
 <html lang="es">
 <head>
   <meta charset="UTF-8"/>
@@ -11,6 +9,10 @@
   <meta name="description" content="¿Implementas SAP Business One, Odoo, Dynamics 365 o NetSuite? Tu ERP no hace nómina chilena. suel2 sí. Únete al programa de partners y gana comisión recurrente por cada cliente."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://suel2.com/partners"/>
+  <link rel="alternate" hreflang="es-CL" href="https://suel2.com/partners"/>
+  <link rel="alternate" hreflang="es" href="https://suel2.com/partners"/>
+  <link rel="alternate" hreflang="en" href="https://suel2.com/en/partners"/>
+  <link rel="alternate" hreflang="x-default" href="https://suel2.com/partners"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 
   <!-- ═══ OPEN GRAPH ══════════════════════════════════════════ -->
@@ -67,6 +69,12 @@
     .btn-primary:hover { background: var(--blue-d); }
     .btn-outline { border: 1.5px solid #CBD5E1; color: var(--navy); background: white; }
     .btn-outline:hover { border-color: var(--blue); color: var(--blue); }
+    .nav-cta { display: flex; gap: 14px; align-items: center; }
+    .lang-switch { display: flex; align-items: center; font-size: 13px; font-weight: 600; color: var(--s400); gap: 2px; }
+    .lang-switch a { color: var(--s400); padding: 2px 5px; border-radius: 6px; transition: all .2s; }
+    .lang-switch a:hover { color: var(--blue); }
+    .lang-switch a.active { color: var(--navy); background: var(--s100); }
+    .lang-switch .sep { color: #CBD5E1; }
 
     /* ─── HERO ─────────────────────────────────────────── */
     .hero {
@@ -267,7 +275,7 @@
           "name": "¿Qué le cuesta a mi cliente?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Plan gratuito hasta 5 trabajadores y plan Pro de 2 UF al mes hasta 50 trabajadores."
+            "text": "El plan se define según el tamaño de la operación de tu cliente. Escríbenos y lo conversamos para darte el detalle."
           }
         }
       ]
@@ -300,6 +308,11 @@
     <a href="contadores">Contadores</a>
   </div>
   <div class="nav-cta">
+    <span class="lang-switch">
+      <a href="/partners" class="active" hreflang="es">ES</a>
+      <span class="sep">/</span>
+      <a href="/en/partners" hreflang="en">EN</a>
+    </span>
     <a class="btn btn-primary" href="#registro">Quiero ser partner →</a>
   </div>
 </nav>
@@ -517,7 +530,7 @@
     </div>
     <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
       <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Qué le cuesta a mi cliente?</h3>
-      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">Plan gratuito hasta 5 trabajadores y plan Pro de 2 UF al mes hasta 50 trabajadores.</p>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">El plan se define según el tamaño de la operación de tu cliente. Escríbenos y lo conversamos para darte el detalle.</p>
     </div>
   </div>
 </section>

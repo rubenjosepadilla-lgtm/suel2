@@ -9,6 +9,10 @@
   <meta name="description" content="¿Llevas la nómina de varias empresas? Gestiona todas desde un solo panel con suel2: liquidaciones, Previred y SII centralizados. Y gana comisión recurrente por cada empresa que sumes."/>
   <meta name="robots" content="index, follow"/>
   <link rel="canonical" href="https://suel2.com/contadores"/>
+  <link rel="alternate" hreflang="es-CL" href="https://suel2.com/contadores"/>
+  <link rel="alternate" hreflang="es" href="https://suel2.com/contadores"/>
+  <link rel="alternate" hreflang="en" href="https://suel2.com/en/contadores"/>
+  <link rel="alternate" hreflang="x-default" href="https://suel2.com/contadores"/>
   <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
 
   <!-- ═══ OPEN GRAPH ══════════════════════════════════════════ -->
@@ -61,6 +65,12 @@
     .btn { display: inline-flex; align-items: center; gap: 6px; padding: 9px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; cursor: pointer; border: none; transition: all .2s; }
     .btn-primary { background: var(--blue); color: white; }
     .btn-primary:hover { background: var(--blue-d); }
+    .nav-cta { display: flex; gap: 14px; align-items: center; }
+    .lang-switch { display: flex; align-items: center; font-size: 13px; font-weight: 600; color: var(--s400); gap: 2px; }
+    .lang-switch a { color: var(--s400); padding: 2px 5px; border-radius: 6px; transition: all .2s; }
+    .lang-switch a:hover { color: var(--blue); }
+    .lang-switch a.active { color: var(--navy); background: var(--s100); }
+    .lang-switch .sep { color: #CBD5E1; }
 
     /* ─── HERO ─────────────────────────────────────────── */
     .hero {
@@ -256,7 +266,7 @@
           "name": "¿Cuánto cuesta para mi despacho?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "El plan Starter es gratuito hasta 5 trabajadores por empresa. El plan Pro cuesta 2 UF al mes para hasta 50 trabajadores."
+            "text": "El plan se define según la cantidad de empresas y trabajadores que gestionas. Escríbenos y lo vemos contigo, con condiciones preferentes para contadores fundadores."
           }
         }
       ]
@@ -289,6 +299,11 @@
     <a href="partners">Partners ERP</a>
   </div>
   <div class="nav-cta">
+    <span class="lang-switch">
+      <a href="/contadores" class="active" hreflang="es">ES</a>
+      <span class="sep">/</span>
+      <a href="/en/contadores" hreflang="en">EN</a>
+    </span>
     <a class="btn btn-primary" href="#registro">Unirme →</a>
   </div>
 </nav>
@@ -318,7 +333,7 @@
 
 <!-- Respuesta rápida (GEO/AEO) -->
 <section aria-label="Resumen" style="background:#F1F5F9;border-left:5px solid #2563EB;padding:22px 5%;">
-  <p style="margin:0 auto;max-width:900px;font-size:1.03rem;line-height:1.62;color:#0F172A;font-family:inherit;"><strong>En breve:</strong> suel2 para Contadores permite gestionar la nómina de todas tus empresas cliente desde un solo panel —liquidaciones, Previred y SII centralizados— y ganar una comisión recurrente por cada empresa que sumes. Plan gratuito hasta 5 trabajadores por empresa y configuración en minutos.</p>
+  <p style="margin:0 auto;max-width:900px;font-size:1.03rem;line-height:1.62;color:#0F172A;font-family:inherit;"><strong>En breve:</strong> suel2 para Contadores permite gestionar la nómina de todas tus empresas cliente desde un solo panel —liquidaciones, Previred y SII centralizados— y ganar una comisión recurrente por cada empresa que sumes. Se configura en minutos y te acompañamos en la puesta en marcha.</p>
 </section>
 <section class="pain-bg" id="por-que">
   <div class="container">
@@ -508,7 +523,7 @@
     </div>
     <div style="border-bottom:1px solid #E5E7EB;padding:18px 0;">
       <h3 style="font-size:1.08rem;color:#0F172A;margin:0 0 6px;font-family:inherit;">¿Cuánto cuesta para mi despacho?</h3>
-      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">El plan Starter es gratuito hasta 5 trabajadores por empresa. El plan Pro cuesta 2 UF al mes para hasta 50 trabajadores.</p>
+      <p style="color:#475569;line-height:1.6;margin:0;font-family:inherit;">El plan se define según la cantidad de empresas y trabajadores que gestionas. Escríbenos y lo vemos contigo, con condiciones preferentes para contadores fundadores.</p>
     </div>
   </div>
 </section>

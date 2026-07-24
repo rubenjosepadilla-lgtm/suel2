@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- ═══ Páginas bilingües (ES raíz + /en) con alternantes hreflang ═══ -->
+  <url>
+    <loc>https://suel2.com/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/"/>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/"/>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/contadores</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/contadores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/contadores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/contadores"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/contadores</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/contadores"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/contadores"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/contadores"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/partners</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/partners"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/partners</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/partners"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/partners"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/partners"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/calculadoras</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadoras"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadoras"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadoras"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/calculadoras</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadoras"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadoras"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadoras"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/calculadora-finiquito</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadora-finiquito"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadora-finiquito"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadora-finiquito"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/calculadora-finiquito</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadora-finiquito"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadora-finiquito"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadora-finiquito"/>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/calculadora-sueldo-liquido-a-bruto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadora-sueldo-liquido-a-bruto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadora-sueldo-liquido-a-bruto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadora-sueldo-liquido-a-bruto"/>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/calculadora-sueldo-liquido-a-bruto</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/calculadora-sueldo-liquido-a-bruto"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/calculadora-sueldo-liquido-a-bruto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/calculadora-sueldo-liquido-a-bruto"/>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/como-calcular-finiquito-chile</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/como-calcular-finiquito-chile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/como-calcular-finiquito-chile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/como-calcular-finiquito-chile"/>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/como-calcular-finiquito-chile</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/como-calcular-finiquito-chile"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/como-calcular-finiquito-chile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/como-calcular-finiquito-chile"/>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/nosotros"/>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/nosotros</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/nosotros"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/nosotros"/>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/blog"/>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/blog</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/blog"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/blog"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/blog"/>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/privacidad"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/privacidad</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/privacidad"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/privacidad"/>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://suel2.com/terminos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/terminos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/terminos"/>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://suel2.com/en/terminos</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://suel2.com/terminos"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://suel2.com/en/terminos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://suel2.com/terminos"/>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- ═══ Indicadores previsionales (solo ES) ═══ -->
+  <url><loc>https://suel2.com/indicadores-previsionales-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-enero-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-febrero-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-marzo-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-abril-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-mayo-2026</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-junio-2026</loc><priority>0.7</priority></url>
+
+  <!-- ═══ Artículos del blog (solo ES) ═══ -->
+  <url><loc>https://suel2.com/ley-proteccion-datos-nomina</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/sueldo-liquido-vs-bruto</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/proceso-de-finiquito</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/que-son-las-provisiones-nomina</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/reportes-legales-nomina-chile</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/gratificacion-legal-chile</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/errores-comunes-nomina</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/indicadores-previsionales-explicados</loc><priority>0.6</priority></url>
+  <url><loc>https://suel2.com/nomina-para-contadores</loc><priority>0.6</priority></url>
+</urlset>
