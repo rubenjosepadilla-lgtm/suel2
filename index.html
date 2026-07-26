@@ -419,6 +419,73 @@
   <p><strong>En breve:</strong> suel2 es un software de nómina y remuneraciones para Chile que automatiza liquidaciones de sueldo, cotizaciones AFP, salud, impuesto único y gratificaciones, con integración a Previred y SII y cumplimiento legal chileno 100% actualizado. Sirve para empresas de cualquier tamaño, contadores que llevan varias empresas y partners ERP. Es una iniciativa de Sapport.</p>
 </section>
 
+<!-- ══ CALCULADORA EMBEBIDA (SEO/AEO + conversión) ══════════ -->
+<style>@media(max-width:760px){#calculadora .calc-wrap{grid-template-columns:1fr !important;}}</style>
+<section id="calculadora" style="background:#fff;">
+  <div class="container">
+    <div class="section-label">Calculadora en vivo</div>
+    <h2 class="section-title">Calcula un sueldo<br/>en segundos.</h2>
+    <p class="section-sub">Escribe el líquido que quieres pagar y estima el sueldo bruto y el costo total para la empresa, con indicadores 2026. Sin registro.</p>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:40px;" class="calc-wrap">
+      <div style="background:var(--s100);border:1px solid #E2E8F0;border-radius:16px;padding:28px;">
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px;">Sueldo líquido deseado ($)</label>
+        <input id="c-liq" type="number" inputmode="numeric" placeholder="1.000.000" style="width:100%;padding:13px 14px;border:1.5px solid #CBD5E1;border-radius:10px;font:inherit;font-size:18px;font-weight:700;color:var(--navy);margin-bottom:16px;"/>
+        <label style="display:block;font-size:13px;font-weight:600;color:var(--s700);margin-bottom:6px;">Tipo de contrato</label>
+        <select id="c-ctr" style="width:100%;padding:13px 14px;border:1.5px solid #CBD5E1;border-radius:10px;font:inherit;font-size:15px;color:var(--navy);background:#fff;margin-bottom:18px;">
+          <option value="indef">Indefinido</option>
+          <option value="plazo">Plazo fijo / obra</option>
+        </select>
+        <button onclick="calcHome()" style="width:100%;background:var(--blue);color:#fff;border:none;border-radius:10px;padding:14px;font:inherit;font-weight:700;font-size:16px;cursor:pointer;">Calcular →</button>
+        <p style="font-size:11.5px;color:var(--s400);margin-top:12px;line-height:1.5;">Estimación referencial con indicadores de julio 2026 (UF, IMM $553.553, AFP promedio, salud 7%). Para el detalle con Isapre, movilización y provisiones, usa la calculadora completa.</p>
+      </div>
+
+      <div id="c-out" style="border:1px solid #E2E8F0;border-radius:16px;padding:28px;background:var(--navy);color:#fff;min-height:180px;display:flex;flex-direction:column;justify-content:center;">
+        <div style="text-align:center;color:rgba(255,255,255,0.6);font-size:15px;">Ingresa un líquido y presiona <strong style="color:#fff;">Calcular</strong> para ver el sueldo bruto y el costo empresa.</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px;font-size:15px;"><a href="/calculadora-sueldo-liquido-a-bruto" style="color:var(--blue);font-weight:700;">Ver calculadora completa (Isapre, movilización, aportes y provisiones) →</a> &nbsp;·&nbsp; <a href="/calculadora-finiquito" style="color:var(--blue);font-weight:700;">Calculadora de finiquito →</a></p>
+  </div>
+</section>
+<script>
+(function(){
+  function clp(n){return new Intl.NumberFormat('es-CL',{style:'currency',currency:'CLP',maximumFractionDigits:0}).format(Math.round(n));}
+  var P={UF:40820,UTM:71506,IMM:553553,afp:0.1144,salud:0.07,afcW:0.006,afcEmpI:0.024,afcEmpP:0.03,sis:0.0162,mut:0.0093,topeUF:90,topeAfc:135.2};
+  function tax(bt,UTM){var t=bt/UTM;var b=[[13.5,0,0],[30,0.04,0.54],[50,0.08,1.74],[70,0.135,4.49],[90,0.23,11.14],[120,0.304,17.80],[310,0.35,23.32],[Infinity,0.40,38.82]];for(var i=0;i<b.length;i++){if(t<=b[i][0])return Math.max(0,t*b[i][1]-b[i][2])*UTM;}return 0;}
+  function fwd(base,indef){
+    var grat=Math.min(0.25*base,4.75*P.IMM/12);
+    var imp=base+grat;
+    var iAfp=Math.min(imp,P.topeUF*P.UF), iAfc=Math.min(imp,P.topeAfc*P.UF);
+    var afp=iAfp*P.afp, salud=iAfp*P.salud, afcW=indef?iAfc*P.afcW:0;
+    var t=tax(imp-afp-salud-afcW,P.UTM);
+    var liq=imp-afp-salud-afcW-t;
+    var afcE=iAfc*(indef?P.afcEmpI:P.afcEmpP), sis=iAfp*P.sis, mut=iAfp*P.mut;
+    return {imp:imp,afp:afp,salud:salud,afcW:afcW,t:t,liq:liq,costo:imp+afcE+sis+mut};
+  }
+  function rev(target,indef){var lo=0,hi=60000000;for(var i=0;i<70;i++){var m=(lo+hi)/2;if(fwd(m,indef).liq<target)lo=m;else hi=m;}return (lo+hi)/2;}
+  window.calcHome=function(){
+    var v=parseFloat(document.getElementById('c-liq').value)||0;
+    var indef=document.getElementById('c-ctr').value==='indef';
+    var out=document.getElementById('c-out');
+    if(v<=0){out.innerHTML='<div style="text-align:center;color:#FCA5A5;font-size:15px;">Ingresa un sueldo líquido válido.</div>';return;}
+    var base=rev(v,indef), r=fwd(base,indef);
+    out.innerHTML=''+
+      '<div style="text-align:center;">'+
+      '<div style="font-size:13px;color:rgba(255,255,255,0.6);">Sueldo bruto base aproximado</div>'+
+      '<div style="font-family:Sora,sans-serif;font-weight:800;font-size:40px;letter-spacing:-1px;margin:4px 0 6px;">'+clp(base)+'</div>'+
+      '</div>'+
+      '<div style="border-top:1px solid rgba(255,255,255,0.12);margin-top:10px;padding-top:12px;font-size:14px;">'+
+      '<div style="display:flex;justify-content:space-between;padding:5px 0;"><span style="color:#CBD5E1;">Total imponible</span><span style="font-weight:700;">'+clp(r.imp)+'</span></div>'+
+      '<div style="display:flex;justify-content:space-between;padding:5px 0;"><span style="color:#CBD5E1;">Descuentos (AFP+salud+imp.)</span><span style="color:#FCA5A5;">-'+clp(r.afp+r.salud+r.afcW+r.t)+'</span></div>'+
+      '<div style="display:flex;justify-content:space-between;padding:5px 0;"><span style="color:#CBD5E1;">Líquido</span><span style="font-weight:700;color:#5EEAD4;">'+clp(r.liq)+'</span></div>'+
+      '<div style="display:flex;justify-content:space-between;padding:8px 0 0;border-top:1px solid rgba(255,255,255,0.12);margin-top:6px;"><span style="color:#CBD5E1;">Costo total empresa</span><span style="font-weight:800;color:#FCD34D;">'+clp(r.costo)+'</span></div>'+
+      '</div>';
+    if(typeof gtag==='function'){gtag('event','calc_home',{liquido:v});}
+  };
+})();
+</script>
+
 <!-- ══ SHOWCASE (estilo Nexor) ══════════════════════════════ -->
 <section id="funciones">
   <div class="container">
