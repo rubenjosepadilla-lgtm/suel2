@@ -188,4 +188,12 @@
   <url><loc>https://suel2.com/errores-comunes-nomina</loc><priority>0.6</priority></url>
   <url><loc>https://suel2.com/indicadores-previsionales-explicados</loc><priority>0.6</priority></url>
   <url><loc>https://suel2.com/nomina-para-contadores</loc><priority>0.6</priority></url>
+
+  <!-- ═══ Documentación de nómina /docs (solo ES) ═══ -->
+  <url><loc>https://suel2.com/docs</loc><priority>0.8</priority></url>
+  <url><loc>https://suel2.com/docs/sueldo-liquido</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/docs/horas-extras</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/docs/cotizaciones-previred</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/docs/impuesto-unico</loc><priority>0.7</priority></url>
+  <url><loc>https://suel2.com/docs/gratificacion-legal</loc><priority>0.7</priority></url>
 </urlset>
